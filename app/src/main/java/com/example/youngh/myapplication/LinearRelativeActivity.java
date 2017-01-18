@@ -1,33 +1,42 @@
 package com.example.youngh.myapplication;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.youngh.myapplication.adapter.LRListViewAdapter;
 
 /**
  * Created by YoungH on 12/25/16.
  */
 
-public class SecondActivity extends Activity {
+public class LinearRelativeActivity extends Activity {
     private ImageButton bt1;
     private ImageButton bt2;
+    private ListView listView;
+
+    private LRListViewAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.linear_relateive_layout);
+        setContentView(R.layout.linear_relative_layout);
         initialView();
         setListener();
     }
 
     private void initialView() {
         bt1 = (ImageButton)findViewById(R.id.lrl_bt1);
+        listView = (ListView)findViewById(R.id.lr_list_view);
+
+        if (mAdapter==null){
+            mAdapter = new LRListViewAdapter(this);
+        }
+        listView.setAdapter(mAdapter);
     }
 
     private void setListener() {

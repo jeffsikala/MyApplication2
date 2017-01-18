@@ -1,16 +1,13 @@
 package com.example.youngh.myapplication;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-
-public class ExampleMain extends AppCompatActivity {
+public class ClassTestActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_example_main);
-
+        setContentView(R.layout.activity_class_test);
     }
-
 }

@@ -93,6 +93,7 @@
     </LinearLayout>
 
     <ListView
+        android:id="@+id/lr_list_view"
         android:layout_above="@id/linear_layout"
         android:layout_below="@id/relative_layout"
         android:background="@android:color/holo_orange_dark"

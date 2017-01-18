@@ -11,19 +11,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SecondActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".MainActivity"
-            android:launchMode="singleInstance"
-            android:screenOrientation="sensor"></activity>
-        <activity
-            android:name=".ExampleMain"
             android:label="@string/title_activity_class_example_main"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -32,6 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ExampleMain"></activity>
+        <activity
+            android:name=".LinearRelativeActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="sensor" />
+        <activity android:name=".ClassTestActivity"></activity>
     </application>
 
 </manifest>

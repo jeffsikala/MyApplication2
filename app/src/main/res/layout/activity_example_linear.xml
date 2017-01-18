@@ -6,25 +6,25 @@
     android:orientation="vertical">
     <!--android:orientation=horizontal"vertical"-->
 
-    <view
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:background="@android:color/holo_red_dark">
-    </view>
+    </ImageView>
 
-    <view
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:background="@android:color/holo_green_dark">
-    </view>
+    </ImageView>
 
-    <view
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:background="@android:color/holo_orange_dark">
-    </view>
+    </ImageView>
 
 </LinearLayout>
