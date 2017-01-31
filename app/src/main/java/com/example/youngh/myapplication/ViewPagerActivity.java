@@ -1,6 +1,7 @@
 package com.example.youngh.myapplication;
 
 
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import java.util.List;
 public class ViewPagerActivity extends AppCompatActivity {
 
     private ArrayList<Fragment> fragmentList= new ArrayList<Fragment>();
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,10 @@ public class ViewPagerActivity extends AppCompatActivity {
         viewPagerAdapter.setContent(fragmentList);
         viewPager.setAdapter(viewPagerAdapter);
 
-
+        tabLayout = (TabLayout) findViewById(R.id.tablayout);
+        tabLayout.setupWithViewPager(viewPager);
 
     }
+
+
 }

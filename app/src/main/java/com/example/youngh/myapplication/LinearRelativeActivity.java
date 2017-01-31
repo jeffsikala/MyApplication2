@@ -52,6 +52,8 @@ public class LinearRelativeActivity extends Activity implements AdapterView.OnIt
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"Button1 was clicked",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(v.getContext(), ViewPagerActivity.class);
+                startActivity(intent);
             }
         });
     }

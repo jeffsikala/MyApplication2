@@ -18,6 +18,11 @@ public class ViewPagerStateAdapter extends FragmentStatePagerAdapter {
         super(fm);
     }
 
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return fragmentArrayList.get(position).getClass().getName();
+    }
+
     public void setContent(ArrayList<Fragment> fragmentArrayList){
         this.fragmentArrayList = fragmentArrayList;
     }
