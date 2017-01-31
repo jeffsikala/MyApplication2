@@ -2,6 +2,7 @@ package com.example.youngh.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,6 +11,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.youngh.myapplication.adapter.LRListViewAdapter;
+
+import static android.graphics.Color.*;
 
 /**
  * Created by YoungH on 12/25/16.
@@ -37,6 +40,8 @@ public class LinearRelativeActivity extends Activity implements AdapterView.OnIt
         if (mAdapter==null){
             mAdapter = new LRListViewAdapter(this);
         }
+        View view = getLayoutInflater().inflate(R.layout.list_head_view,null);
+        listView.addHeaderView(view);
         listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(this);
     }

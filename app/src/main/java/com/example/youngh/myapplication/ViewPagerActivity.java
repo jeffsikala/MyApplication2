@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.youngh.myapplication.adapter.ViewPagerAdapter;
+import com.example.youngh.myapplication.adapter.ViewPagerStateAdapter;
 import com.example.youngh.myapplication.fragment.ContentFragment;
 import com.example.youngh.myapplication.fragment.HistoryFragment;
 import com.example.youngh.myapplication.fragment.LoginFragment;
@@ -32,7 +33,8 @@ public class ViewPagerActivity extends AppCompatActivity {
         fragmentList.add(new HistoryFragment());
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.vp);
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
+//        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
+        ViewPagerStateAdapter viewPagerAdapter = new ViewPagerStateAdapter(this.getSupportFragmentManager());
         viewPagerAdapter.setContent(fragmentList);
         viewPager.setAdapter(viewPagerAdapter);
 
