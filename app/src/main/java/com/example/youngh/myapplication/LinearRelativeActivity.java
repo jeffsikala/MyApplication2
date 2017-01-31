@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -14,7 +15,7 @@ import com.example.youngh.myapplication.adapter.LRListViewAdapter;
  * Created by YoungH on 12/25/16.
  */
 
-public class LinearRelativeActivity extends Activity {
+public class LinearRelativeActivity extends Activity implements AdapterView.OnItemClickListener {
     private ImageButton bt1;
     private ImageButton bt2;
     private ListView listView;
@@ -37,7 +38,9 @@ public class LinearRelativeActivity extends Activity {
             mAdapter = new LRListViewAdapter(this);
         }
         listView.setAdapter(mAdapter);
+        listView.setOnItemClickListener(this);
     }
+
 
     private void setListener() {
         bt1.setOnClickListener(new View.OnClickListener() {
@@ -61,4 +64,8 @@ public class LinearRelativeActivity extends Activity {
         startActivity(intent);
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(this, "listview was clicked at" + position, Toast.LENGTH_SHORT).show();
+    }
 }

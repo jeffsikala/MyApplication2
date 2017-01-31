@@ -75,8 +75,8 @@ public class LRListViewAdapter extends BaseAdapter {
         return convertView;
     }
 
-    private static class ViewHolder {
-        public TextView textView;
-    }
+}
 
+class ViewHolder {
+    public TextView textView;
 }
